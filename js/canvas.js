@@ -15,7 +15,7 @@ function init() {
     canvas = createCanvas(0, 0, width, height);
     context = canvas.getContext('2d');
 
-    ball = new Ball(100, 100, 20, '#ee3344', context);
+    ball = new Ball(100, 100, 20, '#b5e2ef', context);
     ball.update();
 
     for (var angle = 0; angle < Math.PI * 2; angle += 0.1) {
@@ -40,6 +40,6 @@ function createCanvas(x, y, width, height) {
     canvas.style.position = 'absolute';
     canvas.style.left = x;
     canvas.style.top = y;
-    canvas.style.background = '#525152';
+    canvas.style.background = '#2b0d3b';
     return canvas;
 }
