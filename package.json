@@ -1,10 +1,10 @@
 {
-  "name": "8-canvasCircularAnimation",
+  "name": "8-canvascircularanimation",
   "version": "1.0.0",
   "description": "Understanding the cosine waves to create circular animations.",
   "main": "server.js",
   "scripts": {
-    "start": "lite-server"
+    "start": "browser-sync start --s --f *.css, *.html, *.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/estebanpadilla/8-canvasCircularAnimation#readme",
   "devDependencies": {
-    "lite-server": "^2.2.2"
+    "browser-sync": "^2.18.6"
   }
 }
