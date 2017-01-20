@@ -4,17 +4,16 @@
 window.addEventListener('load', init, false);
 function init() {
 
-    var canvas = null;
-    var context = null;
-    var ball = null;
 
-    var width = window.innerWidth;
-    var height = window.innerHeight;
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let canvas = document.createElement('canvas');
+    document.body.appendChild(canvas);
+    canvas.width = width;
+    canvas.height = height;
+    let context = canvas.getContext('2d');
 
-    canvas = createCanvas(width, height);
-    context = canvas.getContext('2d');
-
-    ball = new Ball(200, 200, 5, '#b5e2ef', context);
+    let ball = new Ball(200, 200, 5, '#b5e2ef', context);
 
 
     // for (var angle = 0; angle < Math.PI * 2; angle += 0.1) {
@@ -39,8 +38,6 @@ function init() {
 
         // ball.y = oy + (Math.sin(angle) * amplitudY);
         ball.x = ox + (Math.cos(angle) * amplitudX);
-
-
 
         if (angle > (Math.PI * 2)) {
             angle = 0;
@@ -74,33 +71,4 @@ function init() {
         context.closePath();
 
     }
-}
-
-function createCanvas(width, height) {
-    var canvas = document.createElement('canvas');
-    document.body.appendChild(canvas);
-    canvas.style.position = 'absolute';
-    canvas.width = width;
-    canvas.height = height;
-    canvas.style.background = '#2b0d3b';
-    return canvas;
-}
-
-function Ball(x, y, radius, color, context) {
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.color = color;
-    this.context = context;
-}
-
-Ball.prototype.render = function render() {
-    this.context.fillStyle = this.color;
-    this.context.beginPath();
-    this.context.arc(this.x, this.y, this.radius, 0, (2 * Math.PI), false);
-    this.context.fill();
-    this.context.closePath();
-}
-Ball.prototype.update = function () {
-    this.render();
 }

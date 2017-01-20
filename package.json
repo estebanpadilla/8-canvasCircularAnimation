@@ -4,7 +4,7 @@
   "description": "Understanding the cosine waves to create circular animations.",
   "main": "server.js",
   "scripts": {
-    "start": "browser-sync start --s --f *.css, *.html, *.js"
+    "start": "browser-sync start --s --f css/style.css, index.html, *.js"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "Esteban Padilla",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/estebanpadilla/8-canvasCircularAnimation/issues"
   },
