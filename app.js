@@ -4,7 +4,6 @@
 window.addEventListener('load', init, false);
 function init() {
 
-
     let width = window.innerWidth;
     let height = window.innerHeight;
     let canvas = document.createElement('canvas');
@@ -23,12 +22,12 @@ function init() {
     //     console.log('degrees: ' + Math.floor(angle / Math.PI * 180));
     // }
 
-    var ox = ball.x;
-    var oy = ball.y;
-    var angle = 0;
-    var angleStep = 0.02;
-    var amplitudX = 100;
-    var amplitudY = 50;
+    let ox = ball.x;
+    let oy = ball.y;
+    let angle = 0;
+    let angleStep = 0.02;
+    let amplitudX = 100;
+    let amplitudY = 50;
 
     function update() {
 
